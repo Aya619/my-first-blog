@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="{% static 'css/mysite.css' %}">
+    </head>
+    <body>
+    	<h1>質問できるガロア理論</h1>
+    	<p>授業ノートをベースに教科書から詳細を引用したテキストを作ることで、大学のノートと教科書の必要性をなくすことが目的です。</p>
+    	<p>他の分野のテキストも作成中です。</p>
+    	<p>協力者募集中（特にプログラマー・webデザイナ・テキスト管理者）</p>
+
+    	{% for prop in props %}
+    	<div class="prop">
+    		<h2>{{ prop }}</h2>
+			<img src="{{prop.img.url}}" width="80%">
+    		<p>{{prop.text|linebreaksbr}}</p>
+    	</div>
+		{% endfor %}
+    </body>
+</html>
