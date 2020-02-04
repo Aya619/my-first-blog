@@ -1,8 +1,29 @@
-{% load static %}
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="{% static 'css/mysite.css' %}">
+        <style type="text/css">
+        	.prop {
+				    padding: 0.5em 1em;
+				    margin: 2em 0;
+				    font-weight: bold;
+				    border: solid 3px #000000;
+					overflow:hidden;
+					}
+			.prop p {
+			    margin: 0; 
+			    padding: 0;
+					} 
+			.text {
+				float:left;
+				width:40%;
+			}
+			.img{
+				margin-top: 50px;
+				float:right;
+				width:55%;
+			}
+
+        </style>
     </head>
     <body>
     	<h1>質問できるガロア理論</h1>
@@ -12,9 +33,14 @@
 
     	{% for prop in props %}
     	<div class="prop">
+    		<div class="text">
     		<h2>{{ prop }}</h2>
-			<img src="{{prop.img.url}}" width="80%">
     		<p>{{prop.text|linebreaksbr}}</p>
+    		</div>
+
+    		<div class="img">
+			<img src="{{prop.img.url}}" width="80%">
+       		</div>
     	</div>
 		{% endfor %}
     </body>
