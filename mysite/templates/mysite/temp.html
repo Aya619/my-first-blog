@@ -1,0 +1,89 @@
+<style type="text/css">
+/* テンプレ */
+/* ここまでテンプレ */
+
+/* ここを拡張する */
+			.plus3{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.txt input:checked ~ .plus3{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+/* ここまで拡張する */
+
+/* 例
+			.plus{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.txt input:checked ~ .plus{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+
+			.plus2{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.txt input:checked ~ .plus2{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+*/
+</style>
+
+
+
+<!-- 本文 -->
+
+<div class="txt">
+
+	<label for="label3">
+<!-- ここに注釈される文 -->
+	</label>
+	<input type="checkbox" id="label3">
+	<p class="plus3">
+		<!-- 注釈文 -->
+	</p>
+
+</div>
+
+<!--　例
+<div class="txt">
+	<label for="label">
+		
+	</label>
+	<input type="checkbox" id="label">
+	<p class="plus">
+		
+	</p>
+
+</div>
+
+<div class="txt">
+	<label for="label2">
+
+	</label>
+	<input type="checkbox" id="label2">
+	<p class="plus2">
+
+	</p>
+
+</div>
+
+
+-->

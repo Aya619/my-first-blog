@@ -1,0 +1,26 @@
+<style type="text/css">
+			.plus{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+</style>
+
+<div class="ala">
+
+	<label for="label">
+<!-- ここに注釈される文 -->		
+	</label>
+	<input type="checkbox" id="label">
+	<p class="plus">
+
+	</p>
+
+</div>

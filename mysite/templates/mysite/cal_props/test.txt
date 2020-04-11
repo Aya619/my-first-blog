@@ -1,0 +1,79 @@
+<style type="text/css">
+			.plus001{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus001{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus2{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus2{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+
+</style>
+
+<u>Def(上界・上限)</u> <br>
+\(
+A\subset \mathbb{ R } \\
+・b\in \mathbb{ R }がAの上界\iff\forall a\in A;a\leq b \\
+
+・b\in \mathbb{ R }がAの上限\iff　bがAの上界の中の最小元 \\
+	b=\sup A　と表す。
+\)
+<br>
+<br>
+
+<div class="ala">
+	<label for="label">
+<!-- ここに注釈される文 -->
+注：Aの最大元は上限になるが、上限が最大限とは限らない。
+	</label>
+	<input type="checkbox" id="label">
+	<p class="plus">
+<!-- 注釈文 -->
+右図(1)のように、Aに最大限が存在する場合は、その最大限が上限。<br>
+右図(2)のように、Aに最大限が存在しない場合は、上限が最大限とは限らない。<br>
+	</p>
+</div>
+<br>
+<div class="ala">
+	<label for="label2">下界・下限の場合も同様。</label>
+	<input type="checkbox" id="label2">
+	<p class="plus2">
+<u>Def(下界・下限)</u><br>
+\(
+A⊂\mathbb{ R } \\
+・b\in \mathbb{ R }がAの下界\iff\forall a\in A;a\geq b \\
+
+・b\in \mathbb{ R }がAの下限\iff　bがAの下界の中の最大元 \\
+	b=\inf A　と表す。
+\)
+	</p>
+
+</div>

@@ -1,0 +1,30 @@
+<style type="text/css">
+			.plus{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+</style>
+\(
+a,b\geq 0とする。　 \\
+あるn\in \mathbb{ N }が存在し、b\leq naが成立　  \\
+\)
+<u>証明</u>　 <br>
+\(
+背理法を用いる。　		\\
+\forall n\in \mathbb{ N },na\leq b \\
+C:={na|n\in \mathbb{ N }}とすると、　 \\
+Cは上に有界　 \\
+⇒x=\sup Cが存在. \\
+\forall n\in \mathbb{ N };na\leq x  \\
+ここで、nとしてn+1をとると、　 \\
+\forall n\in \mathbb{ N },(n+1)a\leq x,na\leq x-a. \\
+x-a\lt xなので、xの最小値に矛盾.
+\)

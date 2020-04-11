@@ -1,0 +1,76 @@
+<style type="text/css">
+			.plus4{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus4{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus5{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus5{
+			    height: auto;
+			    opacity: 1;
+			}
+</style>
+\(
+A\subset　\mathbb{ R }は空でなく、上に有界とする。 \\
+(1)a_{0} = supA \\
+\)
+<div class="ala">
+
+	<label for="label4">
+<!-- ここに注釈される文 -->
+\(		
+(2)a_{0}は上界で、\forall \epsilon\gt 0, ∃a\in A , a_{0}-\epsilon\lt a 
+\)
+	</label>
+	<input type="checkbox" id="label4">
+	<p class="plus4">
+\(
+a_{0}から少しでも小さくなれば、Aに入るということ。
+\)
+	</p>
+
+</div>
+<br>
+<u>証明の概要</u> <br>
+\(
+(1)\Rightarrow(2)背理法を用いる。 
+∃\epsilon\gt 0,\forall a\in A a_{0}-\epsilon≧a とする \\
+a_{0}は上限(上界の最小値)のはずだが、a_{0}-\epsilonが上界であり、a_{0}より小さいので（右図）矛盾。 \\
+(2)\Rightarrow(1)背理法を用いる。 \\
+あるAの上界xを用いて、\epsilonに \\
+\epsilon=a_{0}-x　 を代入すると\\
+x\lt a　となり xがAの上界であることと矛盾。 \\\\
+
+\)
+
+<u>証明</u>	<br>
+\(
+(1)\Rightarrow(2)を示す。 \\
+a_{0}が上限なので、a_{0}は上界。 \\
+よって後半を示す。背理法を用いる。すなわち、　 \\
+∃\epsilon>0,\forall a\in A;a_{0}-\epsilon≧a \\
+このとき、　[a_{0}-\epsilon]がa_{0}より小さい上界になり、a_{0}の最小性に矛盾。 \\
+
+(2)\Rightarrow(1)を示す。　 \\
+(2)の仮定の下で、a_{0}がAの上界のうち、最小であること、 \\
+すなわち、任意のAの上界の元xに対して、a_{0}≦x　を示せばよい。 \\
+背理法を用いる。すなわち、あるAの上界xが存在して、	a_{0}>x　と仮定する。 \\
+ここで　\epsilon=a_{0}-x\gt 0 とすると、(2)より、あるxが存在して、 \\
+a_{0}-\epsilon\lt a　 \\
+a_{0}-(a_{0}-x)\lt a  \\
+x\lt a  \\
+これはxがAの上界であることに矛盾。　 \\
+\)

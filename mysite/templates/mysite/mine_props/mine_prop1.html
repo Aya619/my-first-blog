@@ -1,0 +1,81 @@
+<style type="text/css">
+			.plus{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus2{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus2{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus3{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus3{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus4{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus4{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus5{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus5{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+
+</style>
+
+\(
+複数のテキストの中の、ある語句の相対的な重要度を示す重みを計算する方法。 \\
+TF(Term Frequency)は、文書dにおける語句tの頻度(tf)であり \\
+IDF(Inverted Document Frequency)は、語句tがテキスト群の中のいくつのテキストに現れているかに関する相対的な重みである。 \\
+tf:その文書に語句tが出てきた数 \\
+IDF:\log(\frac{N}{df}) \\
+(df:語句tを含むテキストの数\quad N:テキストの総数 )
+語句tを含むテキストが多い:IDFが小さくなる \\
+語句tを含むテキストが少ない:IDFが大きくなる \\
+つまり、IDFは語句tがテキストのオリジナリティを表現してる度合い \\
+TF-IDF(tf\times \frac{N}{df})は語句tのそのテキストにおける重要度 \\
+そのテキストにたくさんでてくる\times 他のテキストより多く出てくる \to IDF大 \\
+そのテキストにたくさんでてくる\times 他のテキストより少なく出てくる \to IDF中 \\
+そのテキストにあまりでてこない\times 他のテキストより多く出てくる \to IDF中 \\
+そのテキストにあまりでてこない\times 他のテキストより少なく出てくる \to IDF小 \\
+
+\)

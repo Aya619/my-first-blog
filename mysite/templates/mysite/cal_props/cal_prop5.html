@@ -1,0 +1,59 @@
+<style type="text/css">
+			.plus5{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus5{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+</style>
+\(
+A,B\subset\mathbb{ R }は空でない、このとき、 \\
+A+B := \{x+y|x\in A,y\in B\}　と定義する \\
+\sup (A+B) = \sup A + \sup B \\
+\)
+<u>証明</u>　 <br>
+\(
+まず、 \sup (A+B)\geq\sup A+\sup Bを示す。 <br>
+\forall a\in A,a\geq\sup A , \forall b\in B,b\geq\sup B <br>
+a+b\geq\sup A+\sup B <br>
+\sup (A+B)\geq\sup A+\sup B <br>
+上限の定義より <br>
+\sup (A+B)\geq\sup A+\sup B <br>
+
+上限の定義より <br>
+\forall a\in A、\forall b\in B　に対して、 <br>
+a+b\geq\sup (A+B) <br>
+\)
+
+<div class="ala">
+\(
+
+∴ a\geq
+\)
+	<label for="label5">
+<!-- ここに注釈される文 -->
+\(\sup (A+B)-b
+\)
+	</label>
+	<input type="checkbox" id="label5">
+	<p class="plus5">
+これがAの上界
+	</p>
+
+</div>
+\(
+\sup A⊆\sup (A+B)-b \\
+同様に　 \\
+\sup B\geq\sup (A+B)-a \\
+両辺を足し合わせると　 \\
+\sup b+\sup A+\sup B\geq2(\sup A+\sup B)\geq\sup (A+B) \\
+次に　 \\
+b\geq\sup (A+B)-\sup A \\
+∴\sup A+\sup B\geq\sup (A+B) 
+\)

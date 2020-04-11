@@ -1,3 +1,15 @@
+    	{% for prop in props %}
+    	<div class="prop">
+    		<div class="text">
+    		<h2>{{ prop }}</h2>
+    		<p>{{prop.text|linebreaksbr}}</p>
+    		</div>
+
+    		<div class="img">
+			<img src="{{prop.img.url}}" width="80%">
+       		</div>
+    	</div>
+		{% endfor %}
 
 体の標数
 

@@ -1,0 +1,228 @@
+
+問3.4 <br>
+\(
+A =
+\begin{pmatrix}
+2 & 4  \\
+-1 & -2 \\
+\end{pmatrix} \\
+
+A^{ \mathrm{ T } } =
+\begin{pmatrix}
+2 & -1 \\
+4 & -2 \\
+\end{pmatrix} \\
+B =
+\begin{pmatrix}
+3 & 2 & 6 \\
+1 & 8 & 1 \\
+\end{pmatrix} \\
+B^{ \mathrm{ T } }=
+\begin{pmatrix}
+3 & 1 \\
+2 & 8 \\
+6 & 1 \\
+\end{pmatrix} \\
+
+C=
+\begin{pmatrix}
+-1 \\
+7 \\
+6 \\
+5 \\
+\end{pmatrix} \\
+
+C^{ \mathrm{ T } }=
+\begin{pmatrix}
+-1 & 7 & 6 & 5 \\
+\end{pmatrix} \\
+\)
+
+<u>Def(行列の演算)</u> <br>
+
+(1)行列の相当 <br>
+同じ行列とは具体的にどういうことか
+\(A=B 　\iff　AとBのサイズが等しくてAとBのすべての成分が等しい　 \)
+(2)足し算、引き算　 <br>
+これらはサイズの等しい行列に対してにみ定義される。　 <br>
+\(
+A = [a_{ij}],B = [b_{ij}] \in M_{m\times n}(\boldsymbol{R}) \\
+M_{m\times n}(\boldsymbol{R}) \ni 
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+A+B=[a_{ij}+b_{ij}] \\
+A-B=[a_{ij}-b_{ij}]
+\end{array}
+\right.
+\end{eqnarray}
+\)
+(3)スカラー倍  <br>
+\(
+\alpha　\in \boldsymbol{R}　,A \in M_{m\times n}(\boldsymbol{R}) \\
+M_{m\times n}(\boldsymbol{R})　\ni \alphaA = [\alpha a_{ij}] 
+
+\)
+
+分割と結合
+
+
+\begin{eqnarray}
+M_{m\times n}(\boldsymbol{R})\ni A =
+\left(\begin{array}{c|c}
+A_{11} & A_{12} \\
+\hline
+A_{21} & A_{22} \\
+\end{array}\right)\end{eqnarray}
+
+
+\begin{eqnarray}
+M_{m\times n}(\boldsymbol{R})\ni B =
+\left(\begin{array}{c|c}
+B_{11} & B_{12} \\
+\hline
+B_{21} & B_{22} \\
+\end{array}\right)\end{eqnarray}
+
+\implies
+\begin{eqnarray}
+\left(\begin{array}{c|c}
+A_{11}B_{11}+A_{12}B_{21} & A_{11}B_{12}+B_{12}B_{22} \\
+\hline
+A_{21}B_{21}+A{22}B{21} & A_{21}B{12}+A{22}B_{22}　\\
+\end{array}\right)\end{eqnarray}
+
+\)
+
+行ベクトル分割
+
+行列の結合
+
+\(
+A\in M_{m\times n}(\boldsymbol{R}),B\in M_{m\times n`}(\boldsymbol{R})
+A,B \implies　[A|B] ([A|B]\in M_{m\times n}(\boldsymbol{R}))
+
+\)
+
+行列の結合
+
+\(
+A\in M_{m\times n}(\boldsymbol{R}),B\in M_{m\times n`}(\boldsymbol{R})
+A,B \implies[A|B]\qquad ([A|B]\in M_{m\times n}(\boldsymbol{R})) \\
+AX:=B\qquad (i=1,2...n) \\
+\implies[AX_{1},AX_{2},...,AX_{n}] = [B_{1},B_{2},...B_{n}]
+\)
+例
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+3x+2y=-8 \\
+x-4y=2 \\
+\end{array}\right.\end{eqnarray}
+\Rightarrow
+\)
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+x-4y=2　\\
+3x+2y=-8 \\
+\end{array}\right.\end{eqnarray}
+\Rightarrow
+\)
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+x-4y=2　\\
+6x+4y=-16 \\
+\end{array}\right.\end{eqnarray}
+\Rightarrow
+\)
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+x-4y=2　\\
+7x=-14 \\
+\end{array}\right.\end{eqnarray}
+\Rightarrow
+\)
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+x-4y=2　\\
+x=-2 \\
+\end{array}\right.\end{eqnarray}
+\Rightarrow
+\)
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+-2-4y=2　\\
+x=-2 \\
+\end{array}\right.\end{eqnarray}
+\Rightarrow
+\)
+\(
+\begin{eqnarray}\left\{\begin{array}{l}
+x=-2 \\
+y=-1　\\
+\end{array}\right.\end{eqnarray}
+\)
+
+\(
+\begin{eqnarray}\left(\begin{array}{ccc}
+3 & 2 & -8 \\
+1 & -4 & 2 \\
+\end{array}\right)\end{eqnarray}
+\)
+
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+1 & -4 & 2 \\
+3 & 2 & -8 \\
+\end{array}\right)\end{eqnarray}
+\qquad 1.行の入れ替え 　\\
+\)
+
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+1 & -4 & 2 \\
+6 & 4 & -16 \\
+\end{array}\right)\end{eqnarray}
+\qquad 2.行を何倍かする  \\ 
+\)
+
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+1 & -4 & 2 \\
+7 & 0 & -14 \\
+\end{array}\right)\end{eqnarray}
+\qquad 3.ある行の何倍かを他の行に加える。 \\
+\)
+
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+1 & -4 & 2 \\
+1 & 0 & -2 \\
+\end{array}\right)\end{eqnarray}
+\qquad 2.行を何倍かする。 \\
+\)
+
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+0 & -4 & 4 \\
+1 & 0 & -2 \\
+\end{array}\right)\end{eqnarray}
+\qquad 3.ある行の何倍かを他の行に加える。 \\
+\)
+
+
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+0 & 1 & -1 \\
+1 & 0 & -2 \\
+\end{array}\right)\end{eqnarray}
+\qquad 2.行を何倍かする。 \\
+\)
+\(
+\to\begin{eqnarray}\left(\begin{array}{ccc}
+1 & 0 & -2 \\
+0 & 1 & -1 \\
+\end{array}\right)\end{eqnarray}
+\qquad 1.行を入れ替える \\
+\)
+
+

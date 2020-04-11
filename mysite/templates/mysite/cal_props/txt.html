@@ -1,0 +1,360 @@
+例１
+x_{n}=1+\frac{1}{n} (n\in \mathbb{ N })　 \\
+⇒\lim_{n\to \infty}x_{n}=1 \qquad (\epsilon-n_{0}式) \\
+任意の \epsilon\gt 0 に対して n_{0}\gt \frac{1}{\epsilon}　をみたす n_{0}\in \mathbb{ N } が存在して、n\geq　n_{0}　を満たす任意の n\in \mathbb{ N }　に対して |x_m-1|=\frac{1}{n}\leq \frac{1}{n_{0}} \lt \epsilon　が成り立つ。 \\
+よって、\lim_{n\to \infty}=1 \\
+
+命題1.7(極限の一意性) \\
+x_{n}\to a, x_{n}\to b(n\to \infty) \\
+⇒ a=b \\
+
+証明 \\
+\epsilon\gt 0を任意にとる。仮定より、ある n_{1},n_{2}\in \mathbb{ N }　が存在して、 \\
+n\geq　n_{1} ⇒　|x_{n}-a|\lt \epsilon/2 \\
+n\geq　n_{2} ⇒　|x_{n}-b|\lt \epsilon/2 \\
+が成り立つ。よって、 n_{0} = max{n_{1},n_{2}} とおくと、 \\
+n\geq　n_{0} \\
+⇒ n\geq　n_{1} かつ　n\geq　n_{2} \\
+⇒　|a-b| = |(a-x_{n})+(x_{n}-b)| \\
+\leq　 |a-x_{n}|+|x_{n}-b| \\
+\lt  \epsilon \\
+\epsilon\gt 0 の任意性より　 \\
+a=b が成り立つ。　 \\
+
+定理1.8
+(1) (収束と四則演算) \\
+	(a) すべてのnで x_{n} = a（定数）ならば \{x_{n}\}_{n} は収束し、 \lim_{n\to \infty}x_{n} = a  \\
+	(b) \{x_{n}\}_{n} , \{y_{n}\}_{n} が収束すれば \{x_{n} + y_{n}\}_{n} も収束し \lim_{n\to \infty}(x_{n} + y_{n}) = \lim_{n\to \infty}x_{n} + \lim_{n\to \infty}y_{n} が成り立つ。  \\
+	(c) \{x_{n}\}_{n} が収束すれば {\alpha ・x_{n}}_{n} も収束し \lim_{n\to \infty}\alpha ・x_{n} = \alpha \lim_{n\to \infty}x_{n} が成り立つ  \\
+	(d) \{x_{n}\}_{n} , \{y_{n}\}_{n} が収束すれば \{x_{n}・y_{n}\}_{n}も収束し、 \lim_{n\to \infty}x_{n}・y_{n} = (\lim_{n\to \infty}x_{n})・(\lim_{n\to \infty}y_{n})  が成り立つ。 \\
+	(e) \{x_{n}\}_{n} , \{y_{n}\}_{n} (\forall n y_{n} \neq  0)が収束して、 \lim_{n\to \infty}y_{n}\neq \varnothingであれば、\frac{\{x_{n}\}_{n}}{\{y_{n}\}_{n}}  も収束し、\lim_{n\to \infty}\frac{x_{n}}{y_{n}} = \frac{\lim_{n\to \infty}x_{n}}{\lim_{n\to \infty}y_{n}} が成り立つ。 \\
+(2) (収束と順序)  \\
+	(a) \{x_{n}\}_{n} , \{y_{n}\}_{n} が収束し、すべてのnで x_{n} \leq  y_{n} ならば \lim_{n\to \infty}x_{n} \leq  \lim_{n\to \infty}y_{n} が成り立つ。特にすべてのnで x_{n} \leq  a (または x_{n} \geq  a)ならば \lim_{n\to \infty}x_{n} \leq  a (または \lim_{n\to \infty} \geq  a) \\
+	(b) (はさみうちの原理) x_{n} \leq  z_{n} \leq  y_{n} (\forall n\in \mathbb{ N })で、 \{x_{n}\}_{n} , \{y_{n}\}_{n} が同じ極限値aに収束していれば \{z_{n}\}_{n} もaに収束する。 \\
+
+証明  \\
+(a): 任意の \epsilon\gt 0 に対し、すべてのnで |x_{n} - a| = 0 なので \lim_{n\to \infty}x_{n} = a である(\epsilon\gt 0 に対する n_{0} として 1 が取れることを示しているのである。)  \\
+(b): a:=\lim_{n\to \infty}x_{n}, b:=\lim_{n\to \infty}y_{n} とする。このとき任意の \epsilon\gt 0 に対して n_{1},n_{2}\in \mathbb{ N } があって、 n\geq n_{1} \Rightarrow |x_{n} -a|\lt \frac{\epsilon}{2} , n\geq n_{2} \Rightarrow |y_{n} -b|\lt \frac{\epsilon}{2} 	となる。n_{1},n_{2}の大きいほうを n_{0} とすれば、 n \geq  n_{0} のとき  \\
+|(x_{n} + y_{n})-(a+b)| \leq  |x_{n} -a|+|y_{n} -b|\lt  \frac{\epsilon}{2} + \frac{\epsilon}{2} =\epsilon \\
+となり(b)が示された。  \\
+(c): a:=\lim_{n\to \infty}x_{n} とすると、任意の \epsilon\gt 0 に対して n_{0} \in  N で n \geq  n_{0} なら  \\
+|\alpha ・x_{n} -\alpha a|= |\alpha ||x_{n} -a|\leq \frac{|\alpha |}{|\alpha |+1}\epsilon\lt \epsilon  \\
+となるので、(c)が示された。  \\
+(d): a:=\lim_{n\to \infty}x_{n} , b:=\lim_{n\to \infty}y_{n} とする。次に示す 補題1.9 より、ある定数 M\gt 0 に対して |x_{n}|\leq M , |y_{n}|\leq M (n=1,2,3...)となる。ここでMは大きいもので置き換えてよいので M\geq |b| としてもよい(実はあとに示す「極限と順序」の関係から M\geq |b|は自動的に保障される) \epsilon\gt 0 を任意にとると、今までの証明で何度も示したように、ある n_{0} があって n\geq n_{0} ならば |x_{n} - a|,|y_{n} - b|\lt \frac{\epsilon}{2M} が成り立つ。これより、 n\geq n_{0} に対しては、  \\
+|x_{n} \ast  y_{n} -a\ast b| = |(x_{n} \ast  y_{n} - x_{n} \ast  b) + (x_{n} \ast  b - a\ast b)| \\
+				 \leq  |x_{n} \ast  y_{n} - x_{n} \ast  b| + |x_{n} \ast  b - a\ast b| \\
+				 = |x_{n}||y_{n} - b| + |x_{n} -a||b| \\
+				 = M|y_{n} - b| + M|x_{n} - a| \\
+				 \lt  \frac{\epsilon}{2} + \frac{\epsilon}{2} \\
+				 = \epsilon \\
+となり x_{n} \ast  y_{n} = a\ast b が示された。 \\
+(e): \lim_{n\to \infty}\frac{1}{y_{n}} を示せば(c)を \{x_{n}\}_{n} と \{y_{n}\}_{n} に適用して(e)が成り立つことが分かる. \\
+b:=\lim_{n\to \infty}\frac{1}{y_{n}}とおくと、|b|\gt 0であり、あるn_{1}があって、  \\
+n\geq n_{1}ならば、|y_{n}-b|\lt \frac{|b|}{2}となるから、n\geq n_{1}において、  \\
+|y_{n}|\gt |b|/2となる.  \\
+一方、任意の\epsilon\gt 0に対しあるn_{2}があって、n\geq n_{2}ならば|y_{n}-b|\lt |b|^2\frac{\epsilon}{2}となる.  \\
+これから、n_{0}をn_{1}とn_{2}の大きいほうとすれば、 \\
+n\geq n_{0}のとき、  \\
+|(\frac{1}{y_{n}})-(1/b)|=(\frac{1}{|y_{n}b|})|y_{n}-b|\lt \frac{2}{|b|^2}\ast \frac{|b|^2}{2}\ast \epsilon＝\epsilon \\
+となり、\lim_{n\to \infty}\frac{1}{y_{n}}=\frac{1}{b}が示された.  \\
+
+(2)の証明    \\
+(a): a:=\lim_{n\to \infty}x_{n}, b:=\lim_{n\to \infty}y_{n}とする.  \\
+このとき任意の\epsilon\gt 0に対して,n_{1},n_{2}\in \mathbb{ N }があって、n\geq n_{1}\Rightarrow|x_{n}-a|\lt \frac{\epsilon}{2}, \\
+n\geq n_{2}\Rightarrow|y_{n}-b|\lt \frac{\epsilon}{2}となる. \\
+n_{1},n_{2}の大きいほうをn_{0}とすれば、n\geq n_{0}のとき、  \\
+a-\frac{\epsilon}{2}\lt x_{n}\leq y_{n}\lt b+\frac{\epsilon}{2}  \\
+なので、a\lt b+\epsilonとなる.\epsilon\gt 0は任意だったので、これからa\leq bがわかる. \\
+(b): 仮定より、a=\lim_{n\to \infty}x_{n}=\lim_{n\to \infty}y_{n}だから、任意の\epsilon\gt 0に対して、  \\
+n_{1},n_{2}\in \mathbb{ N }があって、n\geq n_{1}\Rightarrow|x_{n}-a|\lt \epsilon,n\geq n_{2}\Rightarrow|y_{n}-a|\lt \epsilonとなる.  \\
+n_{1},n_{2}の大きいほうをn_{0}とすれば、    \\
+n\geq n_{0}のとき|x_{n}-a|\lt \epsilon、|y_{n}-a|\lt \epsilonがともに成り立つ.したがってn\geq n_{0}のとき  \\
+a-\epsilon\lt x_{n}\leq z_{n}\leq y_{n}\lt a+\epsilon    \\
+となり、n\geq n_{0}ならば、|a-z_{n}|\lt \epsilonとなるので、  \\
+\{z_{n}\}_{n}がaに収束することが示された. \\
+
+補題1.9 \\
+収束数列は有界である。  \\
+すなわち、 x_{n} \to  a (n\to \infty) , \exists M\gt 0 \forall n\in \mathbb{ N } [|x_{n}|\leq M] \\
+
+第二章 1変数連続関数  \\
+
+2.1 点列的定義と基本性質  \\
+定義(点列的定義)  \\
+I\subset R,f:I\to R,a\in I とする。 \\
+・fがaで連続である :\iff \forall {a_{n}}\subset I [x_{n} \to  a \Rightarrow f(x_{n}) \to  f(a)] \\
+・fがI上で連続である :\iff fがIのすべての点で連続である。  \\
+
+命題2.1(連続性と四則演算) \\
+f,g は I\subset R を定義域とする実数値関数で、ともに a\in I で連続、\alpha は実数とすると次が成り立つ。  \\
+(1) f+g も a で連続  \\
+(2) \alpha f も a で連続  \\
+(3) fg も a で連続  \\
+(4) f(a)\neq 0 のときは 1/f \\
+
+定理2.2(Weierestressの最大値定理) \\
+fが閉区間[a,b]上の連続関数ならば、fは[a,b]で有界で最大値、最小値をとる。 \\
+
+証明 \\
+step1 \\
+fが[a,b]で有界であることを示す。 \\
+(背理法) \\
+fが[a,b]で有界でないとすると (\star)を否定し、	 \\
+\forall n\in \mathbb{ N },\exists x_{n}\in [a,b]\qquad [|f(x_{n})|\geq n]\qquad (\star\star) \\
+x_{n}\in [a,b]より\{x_{n}\}_{n}は有界であるから、Bolzano Weierstress定理より、 \\
+\{x_{n}\}_{n}は収束部分列\{x_{nk}\}_{k}をもつ。 \\
+c = \lim_{ k \to \infty } とする。 \\
+定理1.8 (2)(a)により c\in [a,b] で、 \\
+fの連続性より \lim_{ n \to \infty }f(x_{nk})=f(c)\qquad (\star\star\star) ところが(\star\star)より \\
+|f(x_{nk})|\geq n_{k} \to \infty(k\to \infty) \\
+となるので、(\star\star\star)に矛盾する。 \\
+step2 \\
+fが[a,b]で最大値をとることを示す。step1より \\
+A:=\{f(x)|x\in [a,b] \}は\mathbb{ R }で有界であるから、 \\
+命題1.1により a_{0}:=\sup A が存在する。 \\
+a_{0}=\sup A=\max A となることを示したい。 \\
+補題1.10より\{a_{n}\}\subset Aで \\
+a_{n}\to a_[0]をみたすものが存在する。 \\
+各nに対してa_{n}\in AであるからAの定義より \\
+f(y_{n})=a_{n}となるy_{n}\in [a,b]が存在する\{M_{n}\}_{n}は有界であるからBolzano Weirstressの定理により \\
+\{y_{n}\}_{n}は収束部分列\{y_{nk}\}_{k}をもつ。 \\
+d:=\lim_{ k \to \infty } y_{nk} とおくと定理1.8(2)(a)により \\
+d\in [a,b]でfの連続性により \\
+\lim_{ k \to \infty }f(y_{nk})=f(d)であり、 \\
+\lim_{ k \to \infty }f(y_{nk})=\lim_{ k \to \infty }=a_{0} \\
+\thereforeすべてのx\in [a,b]に対して、 \\
+f(x)\leq a_{0}=f(a) \\
+よってfはx=dで最大値をとる。 \\
+定理2.3(中間値の定理) \\
+fが[a,b]上で連続ならば、fはf(a)とf(b)の中間の値をすべてとる。 \\
+証明 \\
+f(a)\lt M\lt f(b)として、f(c)=Mとなる c\in [a,b]が存在することを示せばいい。 \\
+x_{0}:=\sup\{x\in [a,b]|f(x)\leq M\} \\
+とおくと、補題1.10より、 \\
+\{x_{n}\}\subset [a,b]でf(x_{n})\leq Mかつx_{n}\to x_{0}を満たすものが存在する。 \\
+fの連続性により、f(x_{0})\leq M \\
+あとは、f(x_0)\geq Mが示せばよい。 \\
+最初の仮定より、M\lt f(b)だったので、x_{0}\neq b、よってx\leq b \\
+y_{n}:=x_{0}+\frac{b-x_{0}}{n}\qquad (n\in \mathbb{ N })とおくと、 \\
+\underbrace{ x_{0}\lt y_{n} }_{ (1) } \leq b, \underbrace{ y_{n}\to x_{0}(n\to \infty) }_{ (2) } 
+(1)よりf(y_{n})\gt M\qquad (\because x_{0}の定義) \\
+(2)f(y_{n})\to f(x_{0})\qquad (\because fの連続性) \\
+\therefore f(x_{0})\geq M(\because 定理1.8(2)(a)) \\
+q.e.d
+
+命題2.4(合成関数の連続性) \\
+f:[a,b]\to [c,d] , g:[c,d]\to \mathbb{ R } \\
+fがx_{0}で連続、gがf(a)で連続 \\
+\to g\ast fはx_{0}で連続。ただし(g\ast f)(x)=g(f(x)) \\
+証明 \\
+\begin{array}{l}
+x_{n}\to x_{0}
+&\Rightarrow f(x_{n})\to f(x_{0}) \\
+&\Rightarrow g(f(x_{n}))\to g(f(x_0))
+\end{array}
+
+定義(関数の単調性) \\
+f:[a,b]\to \mathbb{ R }とする。 \\
+・fが単調増加:\Rightarrow \forall x,\forall y\in[a,b] [x\lt y \Rightarrow f(x)\leq f(y)]  \\
+・fが狭義単調増加:\Rightarrow \forall x,\forall y\in[a,b] [x\lt y \Rightarrow f(x)\lt f(y)] \\
+・(狭義)単調増加または(狭義)単調減少であることを(狭義)単調であるという。 \\
+
+定理2.5(逆関数の存在と連続性) \\
+f:[a,b]\to \mathbb{ R }が狭義単調かつ連続 \\
+\Rightarrow fの逆関数f^{-1}が存在してf^{-1}も狭義単調かつ連続
+
+定義I\in \mathbb{ R }で　I\to \mathbb{ R },a\in I \\
+とするとき、fがaで連続であるとは、 \\
+aに収束するIの中の任意の点列\{x_{n}\}_{n}(x_{n}\in I(\forall n)) \\
+に対して\{f(x_{n})\}_{n}がf(a)に収束すると、 \\
+fはI上で連続であるという。 \\
+命題2.1(関数の連続性と四則演算) \\
+f、gがI\in \mathbb{ R }と定義域とする。 \\
+実数値関数で、ともにa\in I で連続、\alphaは実数とすると、次が成り立つ。 \\
+(1) f+gもaで連続 \\
+(2)\alpha fもaで連続 \\
+(3)fgもaで連続 \\
+(4)f(a)\neq　0　のときは、\frac{1}{f}がaの近くで定義され連続
+
+
+縮小法 \\
+数列\{a_{n}\}が縮小列 \\
+:\iff \exists r\in (0,1) , \forall n\in \mathbb{ N }; |a_{n+1}-a_{n}|\leq r|a_{n}-a_{n-1} \\
+Cauchy列 \\
+数列\{a_{n}\}がCauchy列 \\
+:\iff \fo列rall \epsilon \gt 0 \quad \exists n_{0}\in \mathbb{ N } \quad \forall n,m\geq n_{0}; |a_{n}-a_{m}|\lt \epsilon \\
+
+Lemma \\
+縮小列\iff Cauchy列 \\
+\{a_{n}\}が縮小列であるとする。 \\
+すなわち、 \\
+\exists r\in (0,1)\quad \forall n\in \mathbb{ N }; \\
+\begin{array}{l}　
+|a_{n+1}-a_{n}|
+&\leq& r|a_{n}-a_{n-1}| \\
+&\leq& r^2|a_{n-1}-a_{n-2}| \\
+\cdots \\
+&\leq& r^{n-1}|a_{2}-a_{1}| \\
+\end{array}
+さて、n\gt mに対して、 \\
+\begin{array}{l}
+a_{n}-a_{m}
+&=&(a_{n}-a_{n-1})+(a_{n-1}-a_{n-2})+\cdot+(a_{m+1}-a_{m})
+&=&\displaystyle \sum_{k=m}^{n-1}(a_{k+1}-a_{k}) \\
+よって \\
+|a_{n}-a_{m}|
+&=&|\displaystyle \sum_{k=m}^{n-1}(a_{k+1}-a_{k})|
+&\lt &\displaystyle \sum_{k=m}^{n-1}|(a_{k+1}-a_{k})|
+&\lt &\displaystyle \sum_{k=m}^{n-1}r^{k-1}|(a_{k+1}-a_{k})|
+&\lt &\frac{r^{m-1}}{1-r}|a_{2}-a_{1}| \\
+\end{array}
+ここで任意の\epsilon\gt 0に対して、あるn_{0}\in \mathbb{ N }で \\
+\frac{r^{n_{0}-1}}{1-r}|a_{2}-a_{1}|\lt \epsilon \quad (Alchimedesの原理より) \\
+まとめると、 \\
+\forall \epsilon\gt 0,\exists n_{0}\in \mathbb{ N }\quad \forall n,m\geq n_{0}; \\
+|a_{n}-a_{m}|
+&\leq& \frac{r^{m-1}}{1-r}|a_{2}-a_{1}| \\
+&\leq& \frac{r^{n_{0}-1}}{1-r}|a_{2}-a_{1}| \\
+&\leq& \epsilon
+
+
+Lemma \\
+縮小列\iff Cauchy列 \\
+\{a_{n}\}が縮小列であるとする。 \\
+すなわち、 \\
+\exists r\in (0,1)\quad \forall n\in \mathbb{ N }; \\
+\begin{array}{l}　
+|a_{n+1}-a_{n}|
+&\leq& r|a_{n}-a_{n-1}| \\
+&\leq& r^2|a_{n-1}-a_{n-2}| \\
+&\cdots \\
+&\leq& r^{n-1}|a_{2}-a_{1}| \\
+\end{array} \\
+さて、n\gt mに対して、 \\
+\begin{array}{l}
+a_{n}-a_{m}
+&=&(a_{n}-a_{n-1})+(a_{n-1}-a_{n-2})+\cdots +(a_{m+1}-a_{m}) \\
+&=&\displaystyle \sum_{k=m}^{n-1}(a_{k+1}-a_{k}) \\
+よって \\
+\end{array} \\
+\begin{array}{l}
+|a_{n}-a_{m}|
+&=&|\displaystyle \sum_{k=m}^{n-1}(a_{k+1}-a_{k})|
+&\lt &\displaystyle \sum_{k=m}^{n-1}|(a_{k+1}-a_{k})|
+&\lt &\displaystyle \sum_{k=m}^{n-1}r^{k-1}|(a_{k+1}-a_{k})|
+&\lt &\frac{r^{m-1}}{1-r}|a_{2}-a_{1}| \\
+\end{array} \\
+ここで任意の\epsilon\gt 0に対して、あるn_{0}\in \mathbb{ N }で \\
+\frac{r^{n_{0}-1}}{1-r}|a_{2}-a_{1}|\lt \epsilon \quad (Alchimedesの原理より) \\
+まとめると、 \\
+\forall \epsilon\gt 0,\exists n_{0}\in \mathbb{ N }\quad \forall n,m\geq n_{0}; \\
+\begin{array}{l}
+|a_{n}-a_{m}|
+&\leq& \frac{r^{m-1}}{1-r}|a_{2}-a_{1}| \\
+&\leq& \frac{r^{n_{0}-1}}{1-r}|a_{2}-a_{1}| \\
+&\leq& \epsilon
+\end{array}
+
+問題 \\
+a_{1} = \frac{1}{2}a_{n}+1 \\
+解答 \\
+\{a_{n}\}は縮小列。 \\
+よってCauchy列は収束するので、 \\
+\{a_{n}\}は収束する。 \\
+\lim a_{n} = \alpha とおくと、 \\
+\alpha = \frac{1}{2}\alpha+1 \\
+\therefore \alpha = 2 \\
+
+連続関数 \\
+f:I\to \mathbb{ R }, I\subset \mathbb{ R } \\
+fがa\in Iで連続 \\
+:\iff aに収束する任意の数列\{a_{n}\}に対し \\
+\{f(x_{n})\}_{n}は収束(f(a_{n})\to f(a)) \\
+
+Lemma \\
+a\in \mathbb{ R }、このとき、 \\
+次を満たす数列\{x_{n}\}が存在する \\
+1.x_{n}\in \mathbb{ Q }\quad (\forall n\in \mathbb{ N }) \\
+2.x_{n}\to a\quad (n\to \infty) \\
+Proof \\
+有理数稠密性を思い出す。 \\
+\forall \in \mathbb{ R }, \forall \epsilon\gt 0, \exists q\in \mathbb{ Q } \\
+|x-q|\lt \epsilon \\
+\epsilon = 1 \to \exists q_{1}\in :|a-q_{1}|\lt 1 \\
+\epsilon = \frac{1}{2} \to \exists q_{2}\in :|a-q_{2}|\lt \frac{1}{2} \\
+\vdots \\
+\epsilon = \frac{1}{n} \to \exists q_{n}\in :|a-q_{n}|\lt \frac{1}{n} \\
+\vdots \\
+
+Lemma \\
+f:\mathbb{ R }\to \mathbb{ R }が\mathbb{ R }上連続とし、 \\
+さらに次を満たす; \\
+f(x+y)=f(x)+f(y)\quad (\forall x,\forall y\in \mathbb{ R }) \\
+このとき、あるc\in\mathbb{ R }が存在して、 \\
+f(x)=cx\quad と表せる。 \\
+Proof \\
+f(x+x)=f(x)+f(x) \\
+\thereforef(2x)=2f(x) \\
+f(x+x+\cdots+x)=f(x)+f(x)\cdots+f(x) \\
+f(nx)=nf(x)\quad n\in \mathbb{ N } \\
+\begin{array}{l}
+f(1)
+&=&f(n\times \frac{1}{n}) \\
+&=&nf(\frac{1}{n}) \\
+\end{array}
+より、 \forall n,m\in \mathbb{ N }\\
+\begin{array}{l}
+f(\frac{m}{n})
+&=&mf(\frac{1}{n}) \\
+&=&\frac{m}{n}f(1) \\
+\end{array} \\
+f(1)=f(1+0)=f(1)+f(0) \\
+f(0)=0=0\times f(1) \\
+\begin{array}{l}
+0 = f(0) 
+&=& f(x-x) \\
+&=& f(x)+f(-x) \\
+\iff f(-x)=-f(x) \\
+\end{array} \\
+f(q) = f(1)\times q\quad q\in \mathbb{ Q } \\
+a\in \mathbb{ R },q_{n}\in \mathbb{ Q }, q_{n}\to a \\
+f(q_{n})=f(1)\times q_{n} \\
+f(a)=f(1)\times a \\
+
+\epsilon -\delta 式の連続性の定義 \\
+epsilon -\delta 式の連続性 \\
+I\subset \mathbb{ R },f:I\to \mathbb{ R },\mathbb{ a }\in Iとする \\
+fが\mathbb{ a }で連続である。 \\
+\begin{array}{l}
+:\iff
+& \exists \epsilon\gt 0,\exists \gt 0 \\
+& \forall [x\in I,|x-a|\lt \delta\to |f(x)-f(a)|\lt \epsilon]
+\end{array} \\
+定理2.6(点列式定義との同値性) \\
+I\subset \mathbb{ R },f:I\to \mathbb{ R },a\in I とする \\
+次の(i),(ii)は同値: \\
+(i)\forall \{x_{n}\}\subset I [x_{n}\to a \Rightarrow f(x_{n})\to f(a)] \\
+(ii)が成立する \\
+証明 \\
+(i)\Rightarrow (ii):対偶を示す。 \\
+\exists \epsilon,\forall \delta \gt 0, \exists x[x\in I,|x-a|\lt \delta かつ|f(x)-f(a)\geq \epsilon] \\
+数列化したい \\
+特に、\delta として、各n\in \mathbb{ N }において、 \\
+\delta=\frac{1}{n}(\gt 0)と、とったときの、 \\
+上の条件を満たすxをx_{n}と書くと、 \\
+\{x_{n}\}\subset I、|x_{n}-a|\lt \frac{1}{n} \\
+かつ \\
+|f(x_{n}-f(x)|\geq \epsilon) \\
+となる。このとき x_{n}\to a となるが、 \\
+f(x_{n})\to とならないので、(i)の否定が証明された。 \\
+(ii)\Rightarrow (i): \epsilon\gt 0を任意にとる(ii)より \\
+\exists \delta\gt 0,\forall x[x\in I,|x-a|\lt \delta \Rightarrow |f(x)-f(a)|\lt \epsilon] \\
+さて、\{x_{n}\}\subset I,x_{n}\to a と仮定すると、 \\
+上の\delta に対して \\
+\exists n_{0}\in \mathbb{ N }[n\geq n_{0}\Rightarrow |x_{n}-a|\lt \delta] \\
+\thereforen\geq n_{0} \Rightarrow |f(x_{n})-f(a)|\lt \delta \\
+\therefore f(x_{n})\to f(a) \\
+
+補題2.7 \\
+fがaで連続ならば、 \\
+fはaのある近傍で有界である。 \\

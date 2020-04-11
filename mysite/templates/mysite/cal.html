@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax
+/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+        <style type="text/css">
+        	body{
+        		background-color: 	#f8f8f8;
+        	}
+        	h3{
+        		color: blue;
+        	}
+        	.prop {
+				    padding: 0.5em 1em 0 1em;
+				    margin: 2em 0 0 0;
+				    font-weight: bold;
+				    border: solid 3px #000000;
+					overflow:hidden;
+				    background-color: white;
+					}
+			.prop p {
+			    margin: 0; 
+			    padding: 0;
+					} 
+			.text {
+			}
+			.pic{
+			}
+			.ala label:hover{
+				background: #efefef;
+			}
+			.ala input {
+				display: none;
+			}
+			.ala label{
+			}
+			h2 {
+			  padding-bottom: .2em;
+			  border-bottom: 1px solid #ccc;
+			}
+			.btn-flat-border {
+							  display: inline-block;
+							  padding: 0.3em 1em;
+							  text-decoration: none;
+							  color: #67c5ff;
+							  border: solid 2px #67c5ff;
+							  border-radius: 3px;
+							  transition: .4s;
+							}
+
+			.btn-flat-border:hover {
+							  background: #67c5ff;
+							  color: white;
+							}
+{{ prop.head|safe }}
+    </style>
+    </head>
+    <body>
+\(
+
+
+\)
+    	<h1>解析学</h1>
+
+    	{% for prop in props %}
+    	<div class="prop">
+    		<div class="text">    		
+    		{{prop.text|safe}}
+    		</div>
+
+    	</div>
+		{% endfor %}
+
+    </body>
+</html>

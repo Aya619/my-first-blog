@@ -1,0 +1,99 @@
+<style type="text/css">
+			.plus6{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus6{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus7{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus7{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+			.plus8{
+			    height: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    opacity: 0;
+			    transition: 0.8s;			
+			}
+			.ala input:checked ~ .plus8{
+			    height: auto;
+			    opacity: 1;
+			    color: red;
+			}
+</style>
+ 
+<div class="ala">
+	<label for="label6">
+<!-- ここに注釈される文 -->		
+\(
+ 単位行列：　\\
+ E := E_{n} :=
+ \begin{pmatrix}
+ 1  &　0  & \ldots  & 0 \\
+ 0  &　1  & \ldots  & 0 \\
+ \vdots  &　\vdots  & \ddots  & \vdots \\
+ 0  &　0  & \ldots  & 1 \\
+ \end{pmatrix} \\
+\)
+
+	</label>
+	<input type="checkbox" id="label6">
+	<p class="plus6">
+対角成分が全て1でそれ以外はすべて0。行列の世界で1と同じような性質を持つ。
+	</p>
+
+</div>
+<div class="ala">
+	<label for="label7">
+<!-- ここに注釈される文 -->		
+\(
+ 零行列: 　\\
+M_{m\times n}(\boldsymbol{R}) \ni 0_{mn} =
+\begin{pmatrix}
+ 0  &　0  & \ldots  & 0 \\
+ 0  &　0  & \ldots  & 0 \\
+ \vdots  &　\vdots  & \ddots  & \vdots \\
+ 0  &　0  & \ldots  & 0 \\
+ \end{pmatrix} \\
+\)
+
+	</label>
+	<input type="checkbox" id="label7">
+	<p class="plus7">
+すべて0。行列の世界で0と同じような性質を持つ。
+	</p>
+
+</div>
+<div class="ala">
+	<label for="label8">
+<!-- ここに注釈される文 -->		
+\(
+  転置行列: 
+ A \in M_{m\times n}(\boldsymbol{R}) に対し、 A^{ \mathrm{ T } }、Aの転置行列を次のように定義する。 \\
+ A^{ \mathrm{ T } } \in M_{m\times n}(\boldsymbol{R})　で \\　
+ A^{ \mathrm{ T } }の (i,j) 成分は　Aの(j,i)成分　
+
+ \)
+
+	</label>
+	<input type="checkbox" id="label8">
+	<p class="plus8">
+もとの行列の行と列を入れ替えた行列。これを考えてみると後々面白い性質が分かってくる。
+	</p>
+
+</div>
